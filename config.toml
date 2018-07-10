@@ -1,0 +1,34 @@
+baseURL = "https://ilgiardinodimelange-3fa28.firebaseapp.com/"
+languageCode = "en-us"
+title = "Il giardino di melange"
+theme = "dimension"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+  description = "Affittacamere"
+  copyright = "Ilgiardinodimelange"
+
+[[params.social]]
+  medium = "phone"
+  icon = "phone"
+  link = "tel:+39-342-090-1555"
+
+[[params.social]]
+  medium = "facebook"
+  icon = "facebook"
+  link = "https://www.facebook.com/ilgiardinodimelangeruvodipuglia/"
+
+[[params.social]]
+  medium = "instagram"
+  icon = "instagram"
+  link = "https://www.instagram.com/il_giardino_di_melange"
+
+[languages]
+[languages.it]
+languageName = 'Italiano'
+weight = 1
+
+[languages.en]
+languageName = 'English'
+weight = 2

@@ -1,0 +1,25 @@
+box: golang
+
+build:
+  # The steps that will be executed on build
+  # Steps make up the actions in your pipeline
+  # Read more about steps on our dev center:
+  # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    - script:
+      name: Initialize git submodules
+      code: |
+            git submodule update --init --recursive
+    - arjen/hugo-build@2.2.1:
+      version: "0.42.2"
+      theme: "dimension"
+
+deploy:
+  steps:
+    - bigtruedata/node-install@1.1.0:
+      version: "10.4.1"
+    - wercker/npm-install@2.0.1:
+      options: "-g firebase-tools"
+    - script:
+      name: Deploy
+      code: firebase deploy --token "$FIREBASE_TOKEN"
