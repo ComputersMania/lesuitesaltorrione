@@ -5,4 +5,4 @@ weight: 20
 ---
 
 
-{{<gallery dir="/images/gallery/">}}
+{{<gallery dir="/images">}}
